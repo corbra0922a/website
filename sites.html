@@ -1,7 +1,37 @@
- <h1>All UV sites</h1>
- <li><a href="./uv-1.html">uv server 1</a></li>
- <li><a href="./uv-2.html">uv server 2</a></li>
- <li><a href="./uv-3.html">uv server 3</a></li>
- <li><a href="./uv-4.html">uv server 4</a></li>
- <li><a href="./uv-5.html">uv server 5</a></li>
- <li><a href="./uv-6.html">uv server 6</a></li>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background: url('./back.jpeg') no-repeat;
+                background-size: cover;
+        <meta charset="utf-8">
+        <script>
+            function goTorandomsite() {
+                const sites = [
+                    './uv-1.html',
+                    './uv-2.html',
+                    './uv-3.html',
+                    './uv-4.html',
+                    './uv-5.html',
+                    './uv-6.html'
+                ];
+                const randomSite = sites[Math.floor(Math.random() * sites.length)];
+                window.location.href = randomSite;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>All UV sites</h1>
+        <select onchange="goTorandomsite()">
+            <option value="">Select a UV server</option>
+            <option value="uv-1">UV Server 1</option>
+            <option value="uv-2">UV Server 2</option>
+            <option value="uv-3">UV Server 3</option>
+            <option value="uv-4">UV Server 4</option>
+            <option value="uv-5">UV Server 5</option>
+            <option value="uv-6">UV Server 6</option>
+        </select>
+    </body>
+</html>
