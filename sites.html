@@ -17,7 +17,14 @@
             }
         </style>
         <script>
-            function goToRandomSite() {
+            function gotoselecteduvsite() {
+                const selectedSite = document.getElementById("uv-sites").value;
+                if (selectedSite) {
+                    window.location.href = selectedSite;
+                }
+            }
+
+            function gotorandomuvsite() {
                 const sites = [
                     './uv-1.html',
                     './uv-2.html',
@@ -33,16 +40,16 @@
     </head>
     <body>
         <h1>All UV sites</h1>
-        <select onchange="goToRandomSite()">
+        <select id="uv-sites" onchange="gotoselecteduvsite()">
             <option value="">Select a UV server</option>
-            <option value="uv-1">UV Server 1</option>
-            <option value="uv-2">UV Server 2</option>
-            <option value="uv-3">UV Server 3</option>
-            <option value="uv-4">UV Server 4</option>
-            <option value="uv-5">UV Server 5</option>
-            <option value="uv-6">UV Server 6</option>
+            <option value="./uv-1.html">UV Server 1</option>
+            <option value="./uv-2.html">UV Server 2</option>
+            <option value="./uv-3.html">UV Server 3</option>
+            <option value="./uv-4.html">UV Server 4</option>
+            <option value="./uv-5.html">UV Server 5</option>
+            <option value="./uv-6.html">UV Server 6</option>
         </select>
         <br><br>
-        <button class="random-button" onclick="goToRandomSite()">Go to Random Site</button>
+        <button class="random-button" onclick="gotorandomuvsite()">Go to random Site</button>
     </body>
 </html>
