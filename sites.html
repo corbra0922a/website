@@ -7,8 +7,17 @@
                 background: url('./back.jpeg') no-repeat;
                 background-size: cover;
             }
+            .random-button {
+                background-color: red;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        </style>
         <script>
-            function goTorandomsite() {
+            function goToRandomSite() {
                 const sites = [
                     './uv-1.html',
                     './uv-2.html',
@@ -24,7 +33,7 @@
     </head>
     <body>
         <h1>All UV sites</h1>
-        <select onchange="goTorandomsite()">
+        <select onchange="goToRandomSite()">
             <option value="">Select a UV server</option>
             <option value="uv-1">UV Server 1</option>
             <option value="uv-2">UV Server 2</option>
@@ -33,5 +42,7 @@
             <option value="uv-5">UV Server 5</option>
             <option value="uv-6">UV Server 6</option>
         </select>
+        <br><br>
+        <button class="random-button" onclick="goToRandomSite()">Go to Random Site</button>
     </body>
 </html>
